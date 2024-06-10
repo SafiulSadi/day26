@@ -26,9 +26,9 @@
 # result = [int(n) for n in numbers if n % 2 == 0]
 # print(result)
 
-numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-
-numbers2 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+# numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+#
+# numbers2 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 # with open("file1.txt", "a") as f1:
 #     for i in numbers:
 #         f1.write(f"{i}\n")
@@ -48,7 +48,7 @@ numbers2 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 # new_dict = {new_key: new_value for item in list}
 # new_dict = {new_key: new_value for (key, value) in dict.items()}
 # new_dict = {new_key: new_value for (key, value) in dict.items() if test}
-names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+# names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
 
 # students_score = {new_key: new_value for item in list}
 # import random
@@ -58,9 +58,55 @@ names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
 # passed_students = {student: score for (student, score) in students_score.items() if score >= 60}
 # print(passed_students)
 
-sentence = 'What is the Airspeed Velocity of an Unladen Swallow?'
-words = sentence.split()
-print(words)
-# result = {new_key: new_value for item in list}
-result = {word: len(word) for word in words}
-print(result)
+# sentence = 'What is the Airspeed Velocity of an Unladen Swallow?'
+# words = sentence.split()
+# print(words)
+# # result = {new_key: new_value for item in list}
+# result = {word: len(word) for word in words}
+# print(result)
+# import pandas
+#
+# student_dict = {
+#     "student": ["Angela", "James", "Lily"],
+#     "score": [56, 76, 98]
+# }
+#
+# # Looping through dictionaries:
+# for (key, value) in student_dict.items():
+#     # print(key)
+#     pass
+#
+# student_data_frame = pandas.DataFrame(student_dict)
+# print(student_data_frame)
+
+# Loop through a data frame
+# for (key, value) in student_data_frame.items():
+#     print(value)
+
+# Loop through rows of a data frame
+# for (index, row) in student_data_frame.iterrows():
+#     if row.student == "Angela":
+#         print(row.score)
+import pandas
+
+# new_dict = {new_key: new_value for (key, value) in dict.items()}
+
+# new_dict = {new_key: new_value for (index, row) in df.iterrows()}
+# new_dict = {new_key: new_value for (key, value) in df.iterrows()}
+# new_dict = {new_key: new_value for (key, value) in df.iterrows()}
+# new_dict = {new_key: new_value for (key, value) in df.iterrows()}
+# new_dict = {new_key: new_value for (key, value) in df.itterrows()}
+df = pandas.read_csv("nato_phonetic_alphabet.csv")
+print(df)
+data_dict = {row.letter: row.code for (index, row) in df.iterrows()}
+print(data_dict)
+
+x = input("Enter a word").upper()
+
+list_comp = [data_dict[letter] for letter in x]
+
+print(list_comp)
+
+
+
+
